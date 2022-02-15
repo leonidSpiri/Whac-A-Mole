@@ -1,20 +1,15 @@
 package spiridonov.whac_a_mole
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.TransitionDrawable
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import spiridonov.whac_a_mole.databinding.ActivityGameBinding
-import java.lang.String
-import kotlin.Array
-import kotlin.Int
-import kotlin.Long
-import kotlin.arrayOf
-import kotlin.arrayOfNulls
 import kotlin.random.Random
 
 
@@ -46,31 +41,37 @@ class GameActivity : AppCompatActivity() {
         for (button in btnArray) {
             button.setOnClickListener {
                 score += 1
-                binding.txtScore.text = score.toString()
-                btnArray[activeMole].setImageResource(R.drawable.tile000)
+                binding.txtScore.text = "Score: $score"
+                val btn = it as ImageButton
+                btn.isEnabled = false
+                btn.setImageResource(R.drawable.tile036)
             }
         }
 
-        object : CountDownTimer(30000, 500) {
-
+        object : CountDownTimer(30000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
+                btnArray[activeMole].isEnabled = false
                 binding.txtTime.text = "Time: ${millisUntilFinished / 1000}"
                 btnArray[activeMole].setImageResource(R.drawable.tile000)
-                activeMole = Random.nextInt(10)
+                var newMole = Random.nextInt(10)
+                while (newMole == activeMole) newMole = Random.nextInt(10)
+                activeMole = newMole
                 showNewMole(mole = activeMole)
             }
 
             override fun onFinish() {
-
+                val intent = Intent(applicationContext, ResultActivity().javaClass)
+                intent.putExtra("score", score.toString())
+                startActivity(intent)
             }
         }.start()
-
 
 
     }
 
     private fun showNewMole(mole: Int) {
         val btn = btnArray[mole]
+        btn.isEnabled = true
         val layers = arrayOfNulls<Drawable>(3)
         layers[0] = ResourcesCompat.getDrawable(resources, R.drawable.tile001, null)
         layers[1] = ResourcesCompat.getDrawable(resources, R.drawable.tile002, null)

@@ -29,6 +29,8 @@ class ResultActivity : AppCompatActivity() {
                 )
             )
         }
+
+
         val msp = getSharedPreferences("AppMemory", Context.MODE_PRIVATE)
         val editor = msp.edit()
         val calendar = Calendar.getInstance()
@@ -38,8 +40,12 @@ class ResultActivity : AppCompatActivity() {
         val score = (intent.getStringExtra("score") ?: "0").toInt()
         binding.txtScoreRes.text = "You scored $score points"
 
+
         var record = 0
-        if (msp.contains(KEY_RECORD)) record = msp.getInt(KEY_RECORD, 0)
+        if (msp.contains(KEY_RECORD)) {
+            record = msp.getInt(KEY_RECORD, 0)
+            binding.txtRecordScore.text = "You record is $record points"
+        }
         if (record < score) {
             binding.txtScoreRes.text = "You scored $score points\nIt is your new record!"
             editor.putInt(KEY_RECORD, score)

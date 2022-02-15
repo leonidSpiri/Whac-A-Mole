@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/WhacAMole/app/src/main/res/layout/activity_about.xml" value="0.92875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/WhacAMole/app/src/main/res/layout/activity_game.xml" value="1.5" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/WhacAMole/app/src/main/res/layout/activity_history.xml" value="0.6997206703910615" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/WhacAMole/app/src/main/res/layout/activity_main.xml" value="0.92875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/WhacAMole/app/src/main/res/layout/activity_result.xml" value="0.8416666666666667" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/WhacAMole/app/src/main/res/layout/history_adapter.xml" value="1.0" />
       </map>
     </option>
   </component>

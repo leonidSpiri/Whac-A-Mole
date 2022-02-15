@@ -3,6 +3,7 @@ package spiridonov.whac_a_mole
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.TransitionDrawable
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.ImageButton
@@ -14,7 +15,7 @@ import kotlin.random.Random
 
 class GameActivity : AppCompatActivity() {
     private lateinit var btnArray: Array<ImageButton>
-
+    private lateinit var mMP: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +37,9 @@ class GameActivity : AppCompatActivity() {
         )
         var activeMole = 0
         var score = 0
-
+        mMP = MediaPlayer.create(applicationContext, R.raw.music)
+        mMP.isLooping = true
+        mMP.start()
         for (button in btnArray) {
             button.setOnClickListener {
                 if (btnArray[activeMole] == it && btnArray[activeMole].isEnabled) {
@@ -48,7 +51,7 @@ class GameActivity : AppCompatActivity() {
             }
         }
 
-        object : CountDownTimer(30000, 1000) {
+        object : CountDownTimer(30000, 500) {
             override fun onTick(millisUntilFinished: Long) {
                 btnArray[activeMole].isEnabled = false
                 btnArray[activeMole].setImageResource(R.drawable.tile000)
@@ -60,13 +63,18 @@ class GameActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
+                mMP.release()
                 val intent = Intent(applicationContext, ResultActivity().javaClass)
                 intent.putExtra("score", score.toString())
                 startActivity(intent)
             }
         }.start()
 
+    }
 
+    override fun onPause() {
+        super.onPause()
+        mMP.release()
     }
 
     private fun showNewMole(mole: Int) {

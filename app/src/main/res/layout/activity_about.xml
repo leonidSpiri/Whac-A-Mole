@@ -5,7 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".ResultActivity">
+    tools:context=".AboutActivity">
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Back to the menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -25,47 +35,51 @@
         app:srcCompat="@drawable/tile036" />
 
     <TextView
-        android:id="@+id/txtRecordScore"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:layout_marginTop="16dp"
-        android:text="You record is 0 points"
-        android:textColor="#FF5722"
-        android:textSize="26dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="188dp"
+        android:text="Made by Spiridonov Leonid, 2022"
+        android:textColor="@color/main"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtScoreRes"
+        android:id="@+id/txtVK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:text="You scored 0 points"
-        android:textColor="#FF5722"
-        android:textSize="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:text="https://vk.com/leonid.spiri"
+        android:textColor="@color/purple_700"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text" />
 
-    <Button
-        android:id="@+id/btnAgain"
+    <TextView
+        android:id="@+id/txtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Play again"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:text="leonid.spiri@yandex.ru"
+        android:textColor="@color/purple_700"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtScoreRes" />
+        app:layout_constraintTop_toBottomOf="@+id/txtVK" />
 
-    <Button
-        android:id="@+id/btnMain"
+    <TextView
+        android:id="@+id/txtGitHub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Go to menu"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:text="https://github.com/leonidSpiri"
+        android:textColor="@color/purple_700"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAgain" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

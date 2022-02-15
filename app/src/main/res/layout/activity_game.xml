@@ -16,6 +16,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:cropToPadding="false"
         android:scaleType="centerInside"
+        android:saveEnabled="false"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,6 +30,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:cropToPadding="false"
         android:scaleType="centerInside"
+        android:saveEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -43,6 +45,7 @@
         android:cropToPadding="false"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
+        android:saveEnabled="false"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/tile000" />
@@ -56,6 +59,7 @@
         android:cropToPadding="false"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
+        android:saveEnabled="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
         app:srcCompat="@drawable/tile000" />
@@ -70,6 +74,7 @@
         android:scaleType="centerInside"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintStart_toStartOf="parent"
+        android:saveEnabled="false"
         app:layout_constraintTop_toBottomOf="@+id/imageButton"
         app:srcCompat="@drawable/tile000" />
 
@@ -80,6 +85,7 @@
         android:layout_marginTop="32dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:cropToPadding="false"
+        android:saveEnabled="false"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
@@ -94,6 +100,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:cropToPadding="false"
         android:scaleType="centerInside"
+        android:saveEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton5"
@@ -107,6 +114,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:cropToPadding="false"
         android:scaleType="centerInside"
+        android:saveEnabled="false"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4"
@@ -121,6 +129,7 @@
         android:cropToPadding="false"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
+        android:saveEnabled="false"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton6"
         app:srcCompat="@drawable/tile000" />
@@ -134,6 +143,7 @@
         android:cropToPadding="false"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
+        android:saveEnabled="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton8"
         app:srcCompat="@drawable/tile000" />
@@ -147,6 +157,7 @@
         android:cropToPadding="false"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        android:saveEnabled="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton7"
         app:srcCompat="@drawable/tile000" />
@@ -159,6 +170,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:cropToPadding="false"
         android:scaleType="centerInside"
+        android:saveEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton9"
@@ -205,7 +217,7 @@
         android:layout_marginEnd="12dp"
         app:layout_constraintEnd_toStartOf="@+id/txtTime"
         app:srcCompat="@drawable/icon_time"
-        tools:layout_editor_absoluteY="18dp" />
+        tools:layout_editor_absoluteY="29dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

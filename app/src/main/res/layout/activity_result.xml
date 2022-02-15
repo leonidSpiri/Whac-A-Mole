@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="188dp"
         android:text="You scored 0 points"
-        android:textSize="40dp"
+        android:textSize="36dp"
         android:textColor="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.479"
